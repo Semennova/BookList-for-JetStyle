@@ -1,14 +1,11 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import { GlobalContext } from '../context/GlobalState';
-// import useLocalStorage from "use-local-storage";
-import useLocalStorage from '../Hooks/LocalStorage'
+
 
 
 export const AddBook = () => {
 
     const { addBook } = useContext(GlobalContext);
-    const { books } = useContext(GlobalContext);
-
 
 
     const [title, setTitle] = useState('');
@@ -33,8 +30,6 @@ export const AddBook = () => {
     setTitle('');
     setAuthor('')
 }
-
-
 
  }
 

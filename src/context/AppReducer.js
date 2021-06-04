@@ -1,3 +1,5 @@
+
+
 export default (state, action) => {
     switch(action.type){
         case 'DELETE_BOOK':
@@ -10,8 +12,10 @@ export default (state, action) => {
                 ...state,
                 books: [action.payload, ...state.books]
             }
+   
   
         default:
             return state
     }
 }
+
