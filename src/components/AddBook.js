@@ -3,11 +3,9 @@ import { GlobalContext } from '../context/GlobalState';
 
 
 
+
 export const AddBook = () => {
-
     const { addBook } = useContext(GlobalContext);
-
-
     const [title, setTitle] = useState('');
     const [author, setAuthor] = useState('');
  
@@ -15,7 +13,6 @@ export const AddBook = () => {
     const onSubmit = (e) => {
         e.preventDefault();
         
-
         const newBook = {
             id: Math.floor(Math.random() * 1000000),
             title,

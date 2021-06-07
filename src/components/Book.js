@@ -1,19 +1,18 @@
 import React, { useContext, useState } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 
+
 export const Book = ({book}) => {
     const { deleteBook, books } = useContext(GlobalContext);
     const [editMode, setEditMode] = useState(false);
-    const [value, setValue] = useState(book.title);
-
+    const [value, setValue] = useState(book.title)
+    
 
 
     const activateEditMode = () => {
       setEditMode(true);
     }
 
-        
-    
     function saveBook(id){
       let udatedBook = [...books].map(book => {
         if(book.id === id){
@@ -24,6 +23,8 @@ export const Book = ({book}) => {
       setValue(udatedBook);
       setEditMode(false)
     }
+
+  
 
     return (
     <div className="liBtn">
@@ -43,4 +44,3 @@ export const Book = ({book}) => {
       </div>
     )
 }
-
